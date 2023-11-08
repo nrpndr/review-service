@@ -55,7 +55,7 @@ This project contains also the [Postman export file](https://github.com/nrpndr/r
     mvn clean install
     java -jar target/user-service.jar
     ```
-- Prerequisite to this is that you need a have a local installation of mongodb. [User service](https://github.com/nrpndr/user-service) is required to perform create/update/delete operation.
+- Prerequisite to the above is that you need a have a local installation of mongodb. [User service](https://github.com/nrpndr/user-service) is required to perform create/update/delete operation.
 - If you want to avoid all that hassle, simply do the following(You need to have docker desktop installed for this)
 	
     ```
