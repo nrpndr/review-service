@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration name="Reviewservice" status="INFO" monitorInterval="3600">
 	<Properties>
-		<Property name="rootLogLevel" value="ALL"/>
+		<Property name="rootLogLevel" value="INFO"/>
 		<Property name="logFileName" value="Reviewservice" />
 		<Property name="Log_Path" value="/usr/local/log/reviewservice"/>
 		<Property name="Log_Pattern" value="%d{MM-dd-yy HH:mm:ss,SSS} %-5p [%c{1}:%L] (%t):  : %m%ex%n" />

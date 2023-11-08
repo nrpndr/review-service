@@ -24,3 +24,5 @@ services:
   
 networks:
   cineevent-net:
+    external: true
+    name: user-service_cineevent-net
