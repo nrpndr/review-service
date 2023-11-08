@@ -1,0 +1,3028 @@
+{
+	"info": {
+		"_postman_id": "be8d2e43-5fba-4ee8-8d2d-fbf92e74bc35",
+		"name": "ReviewService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3998349"
+	},
+	"item": [
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "{movieId}",
+					"item": [
+						{
+							"name": "reviews",
+							"item": [
+								{
+									"name": "{reviewId}",
+									"item": [
+										{
+											"name": "get Review",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews",
+														":reviewId"
+													],
+													"variable": [
+														{
+															"key": "movieId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "reviewId",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"reviewId\": \"<string>\",\n  \"starRating\": \"<integer>\",\n  \"reviewDescription\": \"<string>\",\n  \"reviewDate\": \"<dateTime>\",\n  \"userId\": \"<integer>\",\n  \"movieId\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Internal Server Error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "delete Review",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews",
+														":reviewId"
+													],
+													"variable": [
+														{
+															"key": "movieId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "reviewId",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"name": "Bad Request",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Internal Server Error",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "update Review",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews",
+														":reviewId"
+													],
+													"variable": [
+														{
+															"key": "movieId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "reviewId",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"reviewId\": \"<string>\",\n  \"starRating\": \"<integer>\",\n  \"reviewDescription\": \"<string>\",\n  \"reviewDate\": \"<dateTime>\",\n  \"userId\": \"<integer>\",\n  \"movieId\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Internal Server Error",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/movies/:movieId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"movies",
+																":movieId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "movieId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "get All Reviews",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/movies/:movieId/reviews",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"movies",
+												":movieId",
+												"reviews"
+											],
+											"variable": [
+												{
+													"key": "movieId",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"reviewId\": \"<string>\",\n    \"starRating\": \"<integer>\",\n    \"reviewDescription\": \"<string>\",\n    \"reviewDate\": \"<dateTime>\",\n    \"userId\": \"<integer>\",\n    \"movieId\": \"<string>\"\n  },\n  {\n    \"reviewId\": \"<string>\",\n    \"starRating\": \"<integer>\",\n    \"reviewDescription\": \"<string>\",\n    \"reviewDate\": \"<dateTime>\",\n    \"userId\": \"<integer>\",\n    \"movieId\": \"<string>\"\n  }\n]"
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "create Review",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/movies/:movieId/reviews",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"movies",
+												":movieId",
+												"reviews"
+											],
+											"variable": [
+												{
+													"key": "movieId",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"reviewId\": \"<string>\",\n  \"starRating\": \"<integer>\",\n  \"reviewDescription\": \"<string>\",\n  \"reviewDate\": \"<dateTime>\",\n  \"userId\": \"<integer>\",\n  \"movieId\": \"<string>\"\n}"
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/movies/:movieId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movies",
+														":movieId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "movieId"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "events",
+			"item": [
+				{
+					"name": "{eventId}",
+					"item": [
+						{
+							"name": "reviews",
+							"item": [
+								{
+									"name": "{reviewId}",
+									"item": [
+										{
+											"name": "get Review 1",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews",
+														":reviewId"
+													],
+													"variable": [
+														{
+															"key": "eventId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "reviewId",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"reviewId\": \"<string>\",\n  \"starRating\": \"<integer>\",\n  \"reviewDescription\": \"<string>\",\n  \"reviewDate\": \"<dateTime>\",\n  \"userId\": \"<integer>\",\n  \"eventId\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Internal Server Error",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "delete Review 1",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews",
+														":reviewId"
+													],
+													"variable": [
+														{
+															"key": "eventId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "reviewId",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{}"
+												},
+												{
+													"name": "Bad Request",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Internal Server Error",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												}
+											]
+										},
+										{
+											"name": "update Review 1",
+											"request": {
+												"auth": {
+													"type": "bearer",
+													"bearer": [
+														{
+															"key": "token",
+															"value": "{{bearerToken}}",
+															"type": "string"
+														}
+													]
+												},
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews",
+														":reviewId"
+													],
+													"variable": [
+														{
+															"key": "eventId",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "reviewId",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"reviewId\": \"<string>\",\n  \"starRating\": \"<integer>\",\n  \"reviewDescription\": \"<string>\",\n  \"reviewDate\": \"<dateTime>\",\n  \"userId\": \"<integer>\",\n  \"eventId\": \"<string>\"\n}"
+												},
+												{
+													"name": "Bad Request",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Bad Request",
+													"code": 400,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Forbidden",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Forbidden",
+													"code": 403,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Not Found",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												},
+												{
+													"name": "Internal Server Error",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															},
+															{
+																"description": "Added as a part of security scheme: bearer",
+																"key": "Authorization",
+																"value": "Bearer <token>"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/events/:eventId/reviews/:reviewId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"events",
+																":eventId",
+																"reviews",
+																":reviewId"
+															],
+															"variable": [
+																{
+																	"key": "eventId"
+																},
+																{
+																	"key": "reviewId"
+																}
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "get All Reviews 1",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/events/:eventId/reviews",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"events",
+												":eventId",
+												"reviews"
+											],
+											"variable": [
+												{
+													"key": "eventId",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"reviewId\": \"<string>\",\n    \"starRating\": \"<integer>\",\n    \"reviewDescription\": \"<string>\",\n    \"reviewDate\": \"<dateTime>\",\n    \"userId\": \"<integer>\",\n    \"eventId\": \"<string>\"\n  },\n  {\n    \"reviewId\": \"<string>\",\n    \"starRating\": \"<integer>\",\n    \"reviewDescription\": \"<string>\",\n    \"reviewDate\": \"<dateTime>\",\n    \"userId\": \"<integer>\",\n    \"eventId\": \"<string>\"\n  }\n]"
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "create Review 1",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{bearerToken}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/events/:eventId/reviews",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"events",
+												":eventId",
+												"reviews"
+											],
+											"variable": [
+												{
+													"key": "eventId",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"reviewId\": \"<string>\",\n  \"starRating\": \"<integer>\",\n  \"reviewDescription\": \"<string>\",\n  \"reviewDate\": \"<dateTime>\",\n  \"userId\": \"<integer>\",\n  \"eventId\": \"<string>\"\n}"
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Forbidden",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "Forbidden",
+											"code": 403,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Not Found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										},
+										{
+											"name": "Internal Server Error",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													},
+													{
+														"description": "Added as a part of security scheme: bearer",
+														"key": "Authorization",
+														"value": "Bearer <token>"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"starRating\": \"<string>\",\n  \"reviewDescription\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/events/:eventId/reviews",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"events",
+														":eventId",
+														"reviews"
+													],
+													"variable": [
+														{
+															"key": "eventId"
+														}
+													]
+												}
+											},
+											"status": "Internal Server Error",
+											"code": 500,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"errorMessage\": \"<string>\",\n  \"timestamp\": \"<long>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8081/reviewservice"
+		}
+	]
+}
