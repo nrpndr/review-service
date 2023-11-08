@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  review-service:
+    container_name: review-service-server
+    image: review-service:1.0
+    build: .
+    restart: always
+    ports:
+      - 8081:8080
+    depends_on:
+      review-service-mongodb:
+        condition: service_started
+    networks:
+      - cineevent-net
+  
+  review-service-mongodb:
+    container_name: review-service-mongodb
+    image: mongo:6.0.7
+    restart: always
+    ports:
+      - 27017-27019:27017-27019
+    networks:
+      - cineevent-net
+  
+networks:
+  cineevent-net:
