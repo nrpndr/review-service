@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import com.cineevent.reviewservice.dto.response.ErrorResponseDTO;
 import com.cineevent.reviewservice.exceptions.InValidUserInputException;
 import com.cineevent.reviewservice.exceptions.ReviewDoesNotExistException;
+import com.cineevent.reviewservice.exceptions.ServiceCommunicationException;
 import com.cineevent.reviewservice.exceptions.UserDoesNotHavePermissionException;
 
 @RestControllerAdvice
@@ -33,6 +34,20 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<ErrorResponseDTO> handleAsMissingPermssion(RuntimeException ex) {
 		ErrorResponseDTO errorResponseDTO = new ErrorResponseDTO(ex.getMessage());
 		return new ResponseEntity<>(errorResponseDTO, HttpStatus.FORBIDDEN);
+	}
+	
+	@ExceptionHandler({ServiceCommunicationException.class})
+	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+	public ResponseEntity<ErrorResponseDTO> handleServiceCommunicationException(RuntimeException ex) {
+		ErrorResponseDTO errorResponseDTO = new ErrorResponseDTO(ex.getMessage());
+		return new ResponseEntity<>(errorResponseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@ExceptionHandler({Exception.class})
+	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+	public ResponseEntity<ErrorResponseDTO> handleRemainingException(Exception ex) {
+		ErrorResponseDTO errorResponseDTO = new ErrorResponseDTO("Unknown Internal Server Error");
+		return new ResponseEntity<>(errorResponseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
 }
