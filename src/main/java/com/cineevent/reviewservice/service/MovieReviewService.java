@@ -108,7 +108,7 @@ public class MovieReviewService {
 			if(isAllowedToModifyOrDelete) {
 				movieReviewRepository.deleteById(reviewId);
 			} else {
-				throw new UserDoesNotHavePermissionException("Not Authorized to delete");
+				throw new UserDoesNotHavePermissionException("Not Authorized to delete this review");
 			}
 		}else {
 			throw constructReviewDoesNotExistException(movieId, reviewId);
@@ -122,7 +122,7 @@ public class MovieReviewService {
 		validateInputForUpdate(reviewRequestDTO);
 		
 		MovieReview reviewFromDB = movieReviewRepository.findById(reviewId).orElse(null);
-		if(reviewFromDB == null || reviewFromDB.getMovieId().equals(movieId)) {
+		if(reviewFromDB == null || !reviewFromDB.getMovieId().equals(movieId)) {
 			throw constructReviewDoesNotExistException(movieId, reviewId);
 		}
 		
@@ -133,7 +133,7 @@ public class MovieReviewService {
 			movieReviewRepository.save(reviewFromDB);
 			return MovieReviewDTOTransformer.transformToReviewResponseDTO(reviewFromDB);
 		} else {
-			throw new UserDoesNotHavePermissionException("Not Authorized to update");
+			throw new UserDoesNotHavePermissionException("Not Authorized to update this review");
 		}
 	}
 	

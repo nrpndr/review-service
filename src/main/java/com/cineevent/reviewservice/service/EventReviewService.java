@@ -108,7 +108,7 @@ public class EventReviewService {
 			if(isAllowedToModifyOrDelete) {
 				eventReviewRepository.deleteById(reviewId);
 			} else {
-				throw new UserDoesNotHavePermissionException("Not Authorized to delete");
+				throw new UserDoesNotHavePermissionException("Not Authorized to delete this review");
 			}
 		}else {
 			throw constructReviewDoesNotExistException(eventId, reviewId);
@@ -122,7 +122,7 @@ public class EventReviewService {
 		validateInputForUpdate(reviewRequestDTO);
 		
 		EventReview reviewFromDB = eventReviewRepository.findById(reviewId).orElse(null);
-		if(reviewFromDB == null || reviewFromDB.getEventId().equals(eventId)) {
+		if(reviewFromDB == null || !reviewFromDB.getEventId().equals(eventId)) {
 			throw constructReviewDoesNotExistException(eventId, reviewId);
 		}
 		
@@ -133,7 +133,7 @@ public class EventReviewService {
 			eventReviewRepository.save(reviewFromDB);
 			return EventReviewDTOTransformer.transformToReviewResponseDTO(reviewFromDB);
 		} else {
-			throw new UserDoesNotHavePermissionException("Not Authorized to update");
+			throw new UserDoesNotHavePermissionException("Not Authorized to update this review");
 		}
 	}
 	
