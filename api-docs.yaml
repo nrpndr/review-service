@@ -3,7 +3,7 @@ info:
   title: ReviewService
   version: v0
 servers:
-- url: http://localhost:9014/reviewservice
+- url: http://localhost:9014
   description: Generated server url
 paths:
   /movies/{movieId}/reviews:
