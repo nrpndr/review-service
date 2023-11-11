@@ -6,7 +6,7 @@ services:
     build: .
     restart: always
     ports:
-      - 8081:8080
+      - 9014:9014
     depends_on:
       review-service-mongodb:
         condition: service_started
@@ -18,7 +18,7 @@ services:
     image: mongo:6.0.7
     restart: always
     ports:
-      - 27017-27019:27017-27019
+      - 27017:27017
     volumes:
       - mongo:/data/db
       - ./mongodb/mongo-init.js:/docker-entrypoint-initdb.d/init-mongo.js

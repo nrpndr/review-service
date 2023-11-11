@@ -3022,7 +3022,7 @@
 	"variable": [
 		{
 			"key": "baseUrl",
-			"value": "http://localhost:8081/reviewservice"
+			"value": "http://localhost:9014/reviewservice"
 		}
 	]
 }

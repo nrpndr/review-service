@@ -38,7 +38,7 @@ Here below are the exposed REST Apis:
 ## REST apis details
 Using a browser it's possible to interact with the REST apis exposed by this service with Swagger:
 
-http://localhost:8081/reviewservice/swagger-ui.html
+http://localhost:9014/reviewservice/swagger-ui.html
 
 ![Swagger](https://github.com/nrpndr/review-service/blob/main/swagger-ui.png "Swagger interface")
 
@@ -53,7 +53,7 @@ This project contains also the [Postman export file](https://github.com/nrpndr/r
 	
     ```
     mvn clean install
-    java -jar target/user-service.jar
+    java -jar target/review-service.jar
     ```
 - Prerequisite to the above is that you need a have a local installation of mongodb. [User service](https://github.com/nrpndr/user-service) is required to perform create/update/delete operation.
 - If you want to avoid all that hassle, simply do the following(You need to have docker desktop installed for this)
