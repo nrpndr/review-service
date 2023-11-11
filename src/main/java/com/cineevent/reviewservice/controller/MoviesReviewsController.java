@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -41,6 +42,7 @@ public class MoviesReviewsController {
 
 	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	@PostMapping("/{movieId}/reviews")
+	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('USER')")
 	public ResponseEntity<MovieReviewResponseDTO> createReview(@PathVariable("movieId") String movieId,
 			@RequestBody ReviewRequestDTO reviewRequestDTO) {
 		return new ResponseEntity<>(reviewService.createReview(reviewRequestDTO, movieId), null, HttpStatus.CREATED);
@@ -48,6 +50,7 @@ public class MoviesReviewsController {
 
 	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	@PatchMapping("/{movieId}/reviews/{reviewId}")
+	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('USER')")
 	public MovieReviewResponseDTO updateReview(@PathVariable("movieId") String movieId,
 			@PathVariable("reviewId") String reviewId, @RequestBody ReviewRequestDTO reviewRequestDTO) {
 		return reviewService.updateReview(movieId, reviewId, reviewRequestDTO);
@@ -55,6 +58,7 @@ public class MoviesReviewsController {
 
 	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	@DeleteMapping("/{movieId}/reviews/{reviewId}")
+	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('USER')")
 	public ResponseEntity<?> deleteReview(@PathVariable("movieId") String movieId,
 			@PathVariable("reviewId") String reviewId) {
 		reviewService.deleteReview(movieId, reviewId);

@@ -42,7 +42,7 @@ public class EventsReviewsController {
 
 	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	@PostMapping("/{eventId}/reviews")
-	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('USER')")
 	public ResponseEntity<EventReviewResponseDTO> createReview(@PathVariable("eventId") String eventId,
 			@RequestBody ReviewRequestDTO reviewRequestDTO) {
 		return new ResponseEntity<>(reviewService.createReview(reviewRequestDTO, eventId), null, HttpStatus.CREATED);
@@ -50,7 +50,7 @@ public class EventsReviewsController {
 
 	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	@PatchMapping("/{eventId}/reviews/{reviewId}")
-	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('USER')")
 	public EventReviewResponseDTO updateReview(@PathVariable("eventId") String eventId,
 			@PathVariable("reviewId") String reviewId, @RequestBody ReviewRequestDTO reviewRequestDTO) {
 		return reviewService.updateReview(eventId, reviewId, reviewRequestDTO);
@@ -58,7 +58,7 @@ public class EventsReviewsController {
 
 	@Operation(security = { @SecurityRequirement (name = "bearer-key") })
 	@DeleteMapping("/{eventId}/reviews/{reviewId}")
-	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('ADMIN')")
+	@PreAuthorize("hasAuthority('ADMIN') || hasAuthority('USER')")
 	public ResponseEntity<?> deleteReview(@PathVariable("eventId") String eventId,
 			@PathVariable("reviewId") String reviewId) {
 		reviewService.deleteReview(eventId, reviewId);
