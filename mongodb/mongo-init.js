@@ -1,5 +1,5 @@
 conn = new Mongo();
-db = conn.getDB("cineevent");
+db = conn.getDB("reviews");
 
 db.MovieReviews.insert({"movieId":"1","userId":1,"starRating":4,"reviewDescription":"Amazing Movie","reviewDate":1699470968420});
 db.MovieReviews.insert({"movieId":"1","userId":2,"starRating":4,"reviewDescription":"Excellent, must watch","reviewDate":1699470968421});

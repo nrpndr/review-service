@@ -20,7 +20,7 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - mongo:/data/db
+      - mongo:/data/review/db
       - ./mongodb/mongo-init.js:/docker-entrypoint-initdb.d/init-mongo.js
     networks:
       - cineevent-net
