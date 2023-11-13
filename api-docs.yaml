@@ -4,7 +4,7 @@ info:
   version: v0
 servers:
 - url: http://localhost:9014
-  description: Generated server url
+  description: Review Service is a service that takes care of maintaining reviews and star rating for a movies and events
 paths:
   /movies/{movieId}/reviews:
     get:
